@@ -2,7 +2,7 @@
 #include <ctime>
 #include <cstdlib>
 
-void accountinfo(std::string name, int age, std::string gender, std::string email, int pass, char temp);
+void accountinfo(std::string name, int age, std::string gender, std::string email, std::string pass, char temp);
 void post(char temp);
 void friends(char temp, std::string& temp3, std::string& temp5);
 void message(char temp, std::string& temp3, std::string& temp5);
@@ -12,13 +12,14 @@ void playerMove(char* spaces, char player);
 void computerMove(char* spaces, char computer);
 bool checkWinner(char* spaces, char player, char computer);
 bool checkTie(char* spaces);
+
 // THIS IS ORANGE 🍊 A SMALL SOCIAL MEDIA
 int main(){
     std::string name;
     int age;
     std::string gender;
     std::string email;
-    int pass;
+    std::string pass;
     char temp;
     std::string temp3;
     std::string temp5;
@@ -31,7 +32,7 @@ int main(){
     std::cin >> gender;
     std::cout << "Enter Your Email:- " << "\n";
     std::cin >> email;
-    std::cout << "Set Your Passcode (ONLY INTEGERS)" << '\n';
+    std::cout << "Set Your Password:- " << '\n';
     std::cin >> pass;
     std::cout << "*****ORANGE*****" << '\n';
     std::cout << "WELCOME TO ORANGE (-_-)" << "\n";
@@ -71,8 +72,8 @@ int main(){
     std::cout << "Version- 1.3 © RAHUL DEY 2026" << "\n";
     return 0;
 }
-void accountinfo(std::string name, int age, std::string gender, std::string email, int pass, char temp){
-    int temp1;
+void accountinfo(std::string name, int age, std::string gender, std::string email, std::string pass, char temp){
+    std::string temp1;
     if (temp == 'a'){
         std::cout << "NAME- " << name << '\n';
         std::cout << "AGE- " << age << '\n';
